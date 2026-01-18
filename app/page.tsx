@@ -477,10 +477,12 @@ export default function Home() {
       {/* Site Footer */}
       <footer className="mt-16 py-6 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>&copy; 2026 Trinos Group. All rights reserved.</p>
+          <p>&copy; 2026 Trinos Research Lab. All rights reserved.</p>
           <a
-            href="/contact"
+            href="https://mediator.trinos.group/?locale=en#contact"
             className="text-purple-600 hover:text-purple-800 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Contact
           </a>
