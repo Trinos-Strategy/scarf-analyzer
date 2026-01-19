@@ -1,5 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#4c1d95',
+};
 
 export const metadata: Metadata = {
   title: 'SCARF 위협 분석기',
@@ -10,6 +18,14 @@ export const metadata: Metadata = {
     title: 'SCARF 위협 분석기',
     description: '조정인이 갈등 상황에서 SCARF 영역의 위협을 신속하게 식별하고 대응 전략을 선택하도록 돕는 도구입니다.',
     type: 'website',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'SCARF 분석기',
+  },
+  formatDetection: {
+    telephone: false,
   },
 };
 
@@ -25,8 +41,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen font-sans antialiased">
         {children}
       </body>
     </html>
