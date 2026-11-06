@@ -1,0 +1,20 @@
+# Dependabot: security updates only, grouped into one PR per ecosystem.
+# open-pull-requests-limit: 0 turns off routine version-update PRs;
+# security updates are not affected by this limit.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directories:
+      - "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "Asia/Seoul"
+    open-pull-requests-limit: 0
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
